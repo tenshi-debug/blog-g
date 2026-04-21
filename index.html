@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angel Leos - Mi primer mapa</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+
+    <!-- UN solo dialog, id sin caracteres extra -->
+    <dialog id="eypopup">
+      <form class="form" id="marker-form">
+
+        <div class="inputs">
+          <label for="place-name">place name</label>
+          <input
+            id="place-name"
+            class="place-name"
+            type="text"
+            minlength="3"
+            maxlength="50"
+            required
+          />
+        </div>
+
+        <div class="inputs">
+          <label for="input-latitude">Latitud</label>
+          <input
+            id="input-latitude"
+            class="input-latitude"
+            type="text"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <div class="inputs">
+          <label for="input-longitude">Longitud</label>
+          <input
+            id="input-longitude"
+            class="input-longitude"
+            type="text"
+            minlength="3"
+            maxlength="20"
+            required
+          />
+        </div>
+
+        <!-- type="button" evita que recarguen la página -->
+        <button type="submit" class="button-save">Guardar</button>
+        <button type="button" class="button-cancel">Cancelar</button>
+
+      </form>
+    </dialog>
+
+    <div class="page">
+      <header>
+        <h1 id="title">Angel Leos - Mi primer mapa</h1>
+        <h2 id="subtitle">gracias open street map</h2>
+      </header>
+
+      <div class="main">
+        <!-- Controles de capa ANTES del mapa para claridad -->
+        <div id="layer-controls">
+          <button type="button" id="btn-street">🗺 Mapa</button>
+          <button type="button" id="btn-satellite">🛰 Satélite</button>
+        </div>
+
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="scripts/script.js">
+      // ── Supabase ───────────────────────────────────────────
+
+    </script>
+
+  </body>
+</html>

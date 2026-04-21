@@ -1,0 +1,69 @@
+.page {
+  width: 1280px;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: rgb(47, 107, 159);
+}
+
+#map {
+  height: 520px;
+  width: 100%;
+  border-radius: 12px;
+}
+.display{ display: flex; 
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 28px;
+        border-bottom: 1px solid var(--border);
+        background: var(--panel);
+        animation: slideDown .5s ease both;
+      }
+#modal {
+  display: none;  
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+#modal-box {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 24px 28px 20px;
+  width: 340px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+#modal-box label {
+  display: block;
+  font-size: 0.88rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+#modal-box input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1.5px solid #4db6d4;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  background: #fafafa;
+}
+.modal-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.modal-btns button {
+  padding: 6px 18px;
+  border: 1.5px solid #888;
+  border-radius: 3px;
+  background: #f0f0f0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-btns button:hover {
+  background: #e0e0e0;
+}
